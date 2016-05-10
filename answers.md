@@ -9,6 +9,7 @@ Common factor is they have no trainer.
 
 
 # Question 2a: What does the following line do "<%= button_to "Throw a Pokeball!", capture_path(id: @pokemon), :class => "button medium", :method => :patch %>"? Be specific about what "capture_path(id: @pokemon)" is doing. If you're having trouble, look at the Help section in the README.
+It creates a button that send http patch request to url /capture?id=#{@pokemon.id}
 
 
 # Question 3: What would you name your own Pokemon?
