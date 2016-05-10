@@ -13,6 +13,10 @@ It creates a button that send http patch request to url /capture?id=#{@pokemon.i
 
 
 # Question 3: What would you name your own Pokemon?
+Show the list of pokemon at: app/views/trainers/show.html.erb
+
+
+
 
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
 
