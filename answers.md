@@ -23,6 +23,18 @@ If it is a path, it need a trainer id.
 redirect_to will figure out how to generate path if you pass in a ActiveModel instance.
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
+This works because in views/layouts/application.html.erb, it is rendering something at the very end.
+It calls <%= render 'layouts/messages' %>
+'layouts/messages' is a partial, and it output a list of div contain error message in flash.
+<% flash.each do |name, msg| %>
+  <% if msg.is_a?(String) %>
+    <div data-alert class="alert-box round <%= name.to_s == 'notice' ? 'success' : 'alert' %>">
+      <%= content_tag :div, msg %>
+      <a href="#" class="close">&times;</a>
+    </div>
+  <% end %>
+<% end %>
+
 
 # Give us feedback on the project and decal below!
 
