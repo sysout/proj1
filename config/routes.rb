@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   devise_for :trainers
   resources :trainers
   patch 'capture' => 'pokemon#capture'
+  post 'damage' => 'pokemon#damage'
 end

@@ -14,11 +14,13 @@ It creates a button that send http patch request to url /capture?id=#{@pokemon.i
 
 # Question 3: What would you name your own Pokemon?
 Show the list of pokemon at: app/views/trainers/show.html.erb
-
-
+I don't really understand the question. Check my code for the change I made.
 
 
 # Question 4: What did you pass into the redirect_to? If it is a path, what did that path need? If it is not a path, why is it okay not to have a path here?
+I pass a trainer object to redirect_to
+If it is a path, it need a trainer id.
+redirect_to will figure out how to generate path if you pass in a ActiveModel instance.
 
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
 
